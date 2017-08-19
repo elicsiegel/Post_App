@@ -4,6 +4,11 @@ import PostForm from './post_form';
 
 class PostList extends React.Component {
 
+
+  componentDidMount() { 
+    this.props.requestPosts();
+  }
+
   render() {
     const { posts, receivePost, removePost } = this.props;
 

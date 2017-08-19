@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import { HashRouter, Route } from 'react-router-dom';
 import PostListContainer from './components/post_list_container'; 
 
-import { receivePost, receivePosts } from './actions/post_actions'; 
+import { receivePost, receivePosts, fetchPosts } from './actions/post_actions'; 
 
 
 const Root = ({ store }) => (
@@ -20,7 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const store = configureStore();
   window.store = store; 
   window.receivePost = receivePost;
-  window.receivePosts = receivePosts; 
+  window.receivePosts = receivePosts;
+  window.fetchPosts = fetchPosts;  
 
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);
