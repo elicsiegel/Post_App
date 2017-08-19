@@ -10,8 +10,7 @@ import { receivePost, receivePosts } from './actions/post_actions';
 const Root = ({ store }) => (
   <Provider store={store}>
     <HashRouter>
-      
-      <h1>Hello W</h1>
+      <Route path="/" component={PostListContainer} />
     </HashRouter>
   </Provider>
 );
