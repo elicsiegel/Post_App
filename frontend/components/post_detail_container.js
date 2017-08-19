@@ -5,7 +5,7 @@ import { fetchPost } from '../actions/post_actions';
 
 const mapStateToProps = (state) => {
   return {
-    post: state
+    post: state.posts[state.ui.postDisplay]
   };
 };
 
