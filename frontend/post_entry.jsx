@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import { Provider } from 'react-redux';
 import { HashRouter, Route } from 'react-router-dom';
+import PostListContainer from './components/post_list_container'; 
 
 import { receivePost, receivePosts } from './actions/post_actions'; 
 
