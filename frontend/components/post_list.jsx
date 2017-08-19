@@ -30,7 +30,6 @@ class PostList extends React.Component {
         <ul className="post-list">
           { postItems }
         </ul>
-        <Route path="/posts/:postId" component={PostDetailContainer} />
         <PostForm createPost={ createPost }/>
       </div>
     );
