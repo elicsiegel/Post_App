@@ -1,6 +1,7 @@
 import React from 'react';
 import PostListItem from './post_list_item'; 
 import PostForm from './post_form'; 
+import PostDetailContainer from './post_detail_container'; 
 import { Route } from 'react-router-dom';
 
 class PostList extends React.Component {
@@ -29,6 +30,7 @@ class PostList extends React.Component {
         <ul className="post-list">
           { postItems }
         </ul>
+        <Route path="/posts/:postId" component={PostDetailContainer} />
         <PostForm createPost={ createPost }/>
       </div>
     );
