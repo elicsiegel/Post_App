@@ -22,3 +22,8 @@ export const removePost = post => ({
 export const fetchPosts = () => dispatch => (
   APIUtil.fetchPosts().then(posts => dispatch(receivePosts(posts)))
 );
+
+export const createPost = post => dispatch => (
+  APIUtil.createPost(post)
+  .then(post => dispatch(receivePost(post)))
+);

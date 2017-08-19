@@ -19,13 +19,16 @@ class PostForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
 
-    const post = this.state;
-    this.props.receivePost(post);
+    const post = Object.assign({}, this.state);
 
-    this.setState({
-      title: "",
-      body: ""
-    });
+    this.props.createPost( { post } ).then(
+      () => this.setState({ title: '', body: '' })
+    );
+
+    // this.setState({
+    //   title: "",
+    //   body: ""
+    // });
   }
 
   render() {

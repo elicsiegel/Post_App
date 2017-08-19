@@ -10,7 +10,7 @@ class PostList extends React.Component {
   }
 
   render() {
-    const { posts, receivePost, removePost } = this.props;
+    const { posts, receivePost, removePost, createPost } = this.props;
 
     const postItems = posts.map(post => (
         <PostListItem
@@ -28,7 +28,7 @@ class PostList extends React.Component {
         <ul className="post-list">
           { postItems }
         </ul>
-        <PostForm receivePost={ receivePost }/>
+        <PostForm createPost={ createPost }/>
       </div>
     );
   }
