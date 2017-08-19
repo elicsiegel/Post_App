@@ -5,19 +5,21 @@ import PostForm from './post_form';
 class PostList extends React.Component {
 
   render() {
-    const { posts, receivePost } = this.props;
+    const { posts, receivePost, removePost } = this.props;
 
     const postItems = posts.map(post => (
         <PostListItem
           key={`post-list-item${post.id}`}
           post={post}
+          removePost={ removePost }
           receivePost={ receivePost } />
       )
     );
 
-    debugger
+    
     return(
       <div>
+        <h2>Posts</h2>
         <ul className="post-list">
           { postItems }
         </ul>
