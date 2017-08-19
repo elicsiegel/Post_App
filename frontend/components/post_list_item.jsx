@@ -7,7 +7,7 @@ class PostListItem extends React.Component {
       <li>
         <h3>{this.props.post.title}</h3>
         <p>{this.props.post.body}</p>
-        <button onClick={() => this.props.removePost(this.props.post)}>Remove Post</button>
+        <button onClick={() => this.props.deletePost(this.props.post)}>Remove Post</button>
       </li>
     ); 
   }

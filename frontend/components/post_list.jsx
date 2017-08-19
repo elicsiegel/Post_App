@@ -1,6 +1,7 @@
 import React from 'react';
 import PostListItem from './post_list_item'; 
 import PostForm from './post_form'; 
+import { Route } from 'react-router-dom';
 
 class PostList extends React.Component {
 
@@ -10,13 +11,13 @@ class PostList extends React.Component {
   }
 
   render() {
-    const { posts, receivePost, removePost, createPost } = this.props;
+    const { posts, receivePost, deletePost, createPost } = this.props;
 
     const postItems = posts.map(post => (
         <PostListItem
           key={`post-list-item${post.id}`}
           post={post}
-          removePost={ removePost }
+          deletePost={ deletePost }
           receivePost={ receivePost } />
       )
     );

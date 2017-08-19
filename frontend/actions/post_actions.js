@@ -27,3 +27,11 @@ export const createPost = post => dispatch => (
   APIUtil.createPost(post)
   .then(post => dispatch(receivePost(post)))
 );
+
+export const updatePost = post => dispatch => (
+  APIUtil.updatePost(post).then(post => dispatch(receivePost(post)))
+);
+
+export const deletePost = post => dispatch => (
+  APIUtil.destroyPost(post).then(post => dispatch(removePost(post)))
+);

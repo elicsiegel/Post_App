@@ -24,11 +24,6 @@ class PostForm extends React.Component {
     this.props.createPost( { post } ).then(
       () => this.setState({ title: '', body: '' })
     );
-
-    // this.setState({
-    //   title: "",
-    //   body: ""
-    // });
   }
 
   render() {
