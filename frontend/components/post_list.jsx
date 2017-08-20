@@ -25,11 +25,13 @@ class PostList extends React.Component {
 
     
     return(
-      <div>
-        <h2>Posts</h2>
-        <ul className="post-list">
-          { postItems }
-        </ul>
+      <div className="index-page">
+        <div>
+          <h2>Posts</h2>
+          <ul className="post-list">
+            { postItems }
+          </ul>
+        </div>
         <PostForm createPost={ createPost }/>
       </div>
     );

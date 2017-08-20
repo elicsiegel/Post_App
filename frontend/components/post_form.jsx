@@ -28,29 +28,32 @@ class PostForm extends React.Component {
 
   render() {
     return (
-      <form className="post-form" onSubmit={this.handleSubmit}>
-        <label>Title:
-          <input
-            className="input"
-            ref="title"
-            value={this.state.title}
-            placeholder="Awesome Post"
-            onChange={this.update('title')}
-            required/>
-        </label>
-        <label>Body:
-          <textarea
-            className="input"
-            ref="body"
-            cols='20'
-            value={this.state.body}
-            rows='5'
-            placeholder="My day is going awesome!"
-            onChange={this.update('body')}
-            required></textarea>
-        </label>
-        <button className="create-button">Create Post!</button>
-      </form>
+      <div className="post-form">
+        <h1>Create New Post</h1>
+        <form className="form" onSubmit={this.handleSubmit}>
+          <label>Title:
+            <input
+              className="input"
+              ref="title"
+              value={this.state.title}
+              placeholder="Awesome Post"
+              onChange={this.update('title')}
+              required/>
+          </label>
+          <label>Body:
+            <input
+              className="input"
+              ref="body"
+              cols='20'
+              value={this.state.body}
+              rows='5'
+              placeholder="My day is going awesome!"
+              onChange={this.update('body')}
+              required></input>
+          </label>
+          <button className="create-button">Create Post!</button>
+        </form>
+      </div> 
     );
   }
 }
