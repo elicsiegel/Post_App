@@ -18,7 +18,7 @@ class PostDetail extends React.Component {
 
     if (this.props.post) {
       return (
-        <div> 
+        <div className="post-show"> 
           <h1>{this.props.post.title}</h1>
           <p>{this.props.post.body}</p>
         </div>

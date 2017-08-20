@@ -20,6 +20,10 @@
   align-items: center;
 }
 
+.post-show {
+  text-align: center; 
+}
+
 .post-list {
   list-style: none; 
 }
