@@ -29,7 +29,7 @@ class PostForm extends React.Component {
   render() {
     return (
       <div className="post-form">
-        <h1>Create New Post</h1>
+        <h3>Create New Post</h3>
         <form className="form" onSubmit={this.handleSubmit}>
           <label>Title:
             <input
@@ -40,7 +40,7 @@ class PostForm extends React.Component {
               onChange={this.update('title')}
               required/>
           </label>
-          <label>Body:
+          <label>Body: 
             <input
               className="input"
               ref="body"
@@ -51,7 +51,7 @@ class PostForm extends React.Component {
               onChange={this.update('body')}
               required></input>
           </label>
-          <button className="create-button">Create Post!</button>
+          <button className="create-button">Submit</button>
         </form>
       </div> 
     );
