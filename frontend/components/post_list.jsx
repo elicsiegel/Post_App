@@ -27,7 +27,7 @@ class PostList extends React.Component {
     
     return(
       <div className="title">
-        <h2>All Posts</h2>
+        <h1>All Posts</h1>
         <div className="index-page">
           <div>
             <ul className="post-list">
