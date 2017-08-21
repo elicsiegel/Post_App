@@ -37,6 +37,11 @@ li {
 a {
   padding: 4px;
 }
+
+label {
+  padding: 5px; 
+}
+
 .title {
   display: flex; 
   flex-direction: column;
@@ -45,7 +50,6 @@ a {
 
 .post-form {
   border: 1px solid black;
-  padding: 10px;
   text-align: center; 
   margin: auto;
   max-width: 250px;
