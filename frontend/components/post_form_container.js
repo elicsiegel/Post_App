@@ -11,10 +11,10 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  createPost: post => dispatch(createPost(post)),
+  // createPost: post => dispatch(createPost(post)),
   updatePost: post => dispatch(updatePost(post)),
-  deletePost: (post) => dispatch(deletePost(post)), 
-  requestPosts: () => dispatch(fetchPosts()), 
+  // deletePost: (post) => dispatch(deletePost(post)), 
+  // requestPosts: () => dispatch(fetchPosts()), 
   fetchPost: (post) => dispatch(fetchPost(post))
 });
 

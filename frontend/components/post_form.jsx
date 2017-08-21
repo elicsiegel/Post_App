@@ -18,6 +18,7 @@ class PostForm extends React.Component {
   }
 
   componentDidMount() {
+    // signals if page is edit page or not
     if (this.props.match) {
       this.props.fetchPost(this.props.match.params.postId).then( (res) => { 
         this.setState({ title: res.post.title, body: res.post.body, id: res.post.id })
@@ -30,7 +31,6 @@ class PostForm extends React.Component {
 
     const post = Object.assign({}, this.state);
 
-    // signals if page is edit page or not
     if (this.props.match) {
       this.props.updatePost({post}).then(({post}) => {
         this.props.history.push(`/posts/${post.id}`)
@@ -40,9 +40,7 @@ class PostForm extends React.Component {
       this.props.createPost( { post } ).then(
         () => this.setState({ title: '', body: '' })
       );
-    }
-
-    
+    }  
   }
 
   render() {
