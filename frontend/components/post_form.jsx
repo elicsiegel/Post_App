@@ -62,7 +62,7 @@ class PostForm extends React.Component {
               className="input"
               ref="title"
               value={this.state.title}
-              placeholder="Awesome Post"
+              placeholder="Title goes here!"
               onChange={this.update('title')}
               required/>
           </label>
@@ -73,7 +73,7 @@ class PostForm extends React.Component {
               cols='20'
               value={this.state.body}
               rows='5'
-              placeholder="My day is going awesome!"
+              placeholder="Body goes here!"
               onChange={this.update('body')}
               required></input>
           </label>
