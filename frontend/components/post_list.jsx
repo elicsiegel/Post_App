@@ -12,12 +12,13 @@ class PostList extends React.Component {
   }
 
   render() {
-    const { posts, receivePost, deletePost, createPost } = this.props;
-
+    const { posts, receivePost, deletePost, createPost, updatePost } = this.props;
+    
     const postItems = posts.map(post => (
         <PostListItem
           key={`post-list-item${post.id}`}
           post={post}
+          updatePost={ updatePost }
           deletePost={ deletePost }
           receivePost={ receivePost } />
       )

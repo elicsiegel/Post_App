@@ -10,6 +10,9 @@ class PostListItem extends React.Component {
           <Link to={`/posts/${this.props.post.id}`}>
             <h3>{this.props.post.title}</h3>
           </Link>
+          <Link to={`/posts/${this.props.post.id}/edit`}>
+            <h5>Edit</h5>
+          </Link>
           <button onClick={() => this.props.deletePost(this.props.post)}>Delete</button>
         </div>
       </li>

@@ -1,4 +1,5 @@
 import React from 'react'; 
+import { Redirect } from 'react-router-dom'; 
 
 class PostForm extends React.Component {
 
@@ -16,20 +17,45 @@ class PostForm extends React.Component {
     return e => this.setState({[property]: e.target.value});
   }
 
+  componentDidMount() {
+    if (this.props.match) {
+      this.props.fetchPost(this.props.match.params.postId).then( (res) => { 
+        this.setState({ title: res.post.title, body: res.post.body, id: res.post.id })
+      }) 
+    }
+  }
+
   handleSubmit(e) {
     e.preventDefault();
 
     const post = Object.assign({}, this.state);
 
-    this.props.createPost( { post } ).then(
-      () => this.setState({ title: '', body: '' })
-    );
+    // signals if page is edit page or not
+    if (this.props.match) {
+      this.props.updatePost({post}).then(({post}) => {
+        this.props.history.push(`/posts/${post.id}`)
+      })
+    } 
+    else {
+      this.props.createPost( { post } ).then(
+        () => this.setState({ title: '', body: '' })
+      );
+    }
+
+    
   }
 
   render() {
+    let title;
+
+    if (this.props.match) {
+      title = <h3>Edit Post</h3>
+    }  else {
+      title = <h3>Create New Post</h3>
+    } 
     return (
       <div className="post-form">
-        <h3>Create New Post</h3>
+        {title}
         <form className="form" onSubmit={this.handleSubmit}>
           <label>Title:
             <input
