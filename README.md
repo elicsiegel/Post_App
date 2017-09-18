@@ -1,6 +1,6 @@
 # Post App
 
-A simple blog post app with a Ruby on Rails backend and a frontend in React.js and Redux.
+A simple blog post app with a Ruby on Rails backend and a frontend in React.js and Redux. All work for this project was done in the frontend folder in React and Redux. The Rails backend was provided.
 
 ## Instructions
 
