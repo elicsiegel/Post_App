@@ -13,8 +13,7 @@ const App = () => (
   <div className="app">
     <Route path="/" exact component={PostListContainer} />
     <Route path="/posts/:postId/edit" component={PostFormContainer} />
-    <Route exact path="/posts/:postId" component={PostDetailContainer} />
-    
+    <Route exact path="/posts/:postId" component={PostDetailContainer} />   
   </div>
 );
 
@@ -28,11 +27,6 @@ const Root = ({ store }) => (
 
 document.addEventListener('DOMContentLoaded', () => {
   const store = configureStore();
-  window.store = store; 
-  window.receivePost = receivePost;
-  window.fetchPost = fetchPost; 
-  window.receivePosts = receivePosts;
-  window.fetchPosts = fetchPosts;  
 
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);
