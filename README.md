@@ -1,4 +1,4 @@
-# React / Redux Take-home Assessment
+# Post App
 
 Read this entire README before starting work on the project.
 
